@@ -1,0 +1,379 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #302b40;
+    background-color: #f8f6f2;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: #6c478c;
+}
+
+a:hover {
+    color: #412858;
+}
+
+a:focus-visible {
+    outline: 3px solid #b58b35;
+    outline-offset: 5px;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, .marca {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+h1 {
+    margin: 12px 0 18px;
+    font-size: 44px;
+}
+
+h2 {
+    margin: 32px 0 12px;
+    font-size: 27px;
+}
+
+p {
+    margin: 0 0 18px;
+}
+
+.etiqueta {
+    margin: 0;
+    color: #795d89;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.introduccion {
+    margin-bottom: 36px;
+    color: #706779;
+    font-size: 17px;
+}
+
+/* Portada: fondo y contenido centrado con Flexbox */
+.portada {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    background-color: #211b35;
+    background-image: linear-gradient(rgba(19, 17, 39, 0.37), rgba(22, 13, 38, 0.78)), url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio {
+    flex: 1;
+    width: 100%;
+    padding: 100px 24px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.inicio .etiqueta {
+    color: #f6dcab;
+    letter-spacing: 4px;
+}
+
+.inicio h1 {
+    max-width: 920px;
+    margin: 27px 0 24px;
+    font-size: 58px;
+    text-shadow: 0 3px 18px #21162d;
+}
+
+.cruce {
+    display: block;
+    margin: 8px 0;
+    color: #f4d9a0;
+    font-size: 32px;
+}
+
+.eslogan {
+    margin: 0 0 8px;
+    font-size: 19px;
+}
+
+.subtitulo {
+    margin: 0 0 36px;
+    color: #f3dcaf;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-style: italic;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.menu a {
+    padding: 8px 0;
+    color: #63576e;
+    border-bottom: 2px solid transparent;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.menu a span {
+    margin-right: 5px;
+}
+
+.menu a:hover, .menu a.activo {
+    color: #684182;
+    border-bottom-color: #9b78b1;
+}
+
+.menu-inicio {
+    gap: 34px;
+}
+
+.menu-inicio a {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.menu-inicio a:hover, .menu-inicio a.activo {
+    color: #f6dcab;
+    border-bottom-color: #f6dcab;
+}
+
+/* Cabecera fija de las tres paginas interiores */
+.cabecera {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: #f8f6f2;
+    border-bottom: 1px solid #e4dde8;
+}
+
+.barra {
+    max-width: 1136px;
+    min-height: 104px;
+    margin: 0 auto;
+    padding: 18px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.marca {
+    color: #493159;
+    font-size: 27px;
+    text-decoration: none;
+}
+
+.marca span {
+    display: block;
+    margin-top: 9px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.contenido {
+    max-width: 1136px;
+    margin: 0 auto;
+    padding: 158px 28px 30px;
+}
+
+.articulo, .contenido-videos {
+    max-width: 856px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.imagen-blog {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.autor {
+    margin: 24px 0 35px;
+    padding-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid #e4dde8;
+}
+
+.autor img {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.autor p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.autor span, .fuentes {
+    color: #706779;
+    font-size: 12px;
+}
+
+.articulo > p {
+    text-align: left;
+}
+
+.fuentes {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e4dde8;
+}
+
+/* Galeria: dos filas de tres imagenes en pantallas amplias */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 24px;
+}
+
+.galeria figure {
+    width: calc((100% - 48px) / 3);
+    margin: 0;
+}
+
+.galeria img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+.galeria figcaption {
+    padding-top: 14px;
+    font-size: 13px;
+}
+
+.galeria figcaption span, .video h2 span {
+    margin-right: 8px;
+    color: #9875ac;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+/* La altura del reproductor se adapta al ancho en proporcion 16:9 */
+.video {
+    margin-bottom: 42px;
+}
+
+.video p {
+    color: #706779;
+    font-size: 15px;
+}
+
+.reproductor {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    background-color: #231c31;
+}
+
+.reproductor iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.enlace-video {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+/* Redes sociales */
+.pie, .pie-inicio {
+    padding: 30px 24px 24px;
+    text-align: center;
+}
+
+.pie {
+    margin-top: 15px;
+    border-top: 1px solid #e4dde8;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.redes a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6c478c;
+    border: 1px solid #cfc1d7;
+    border-radius: 50%;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.redes a:hover {
+    color: #ffffff;
+    background-color: #6c478c;
+    border-color: #6c478c;
+}
+
+.pie-inicio .redes a {
+    color: #ffffff;
+    border-color: #b7a7c1;
+}
+
+.pie-inicio .redes a:hover {
+    color: #302b40;
+    background-color: #f6dcab;
+    border-color: #f6dcab;
+}
+
+.pie p, .pie-inicio p {
+    margin: 18px 0 0;
+    color: #706779;
+    font-size: 11px;
+}
+
+.pie-inicio p {
+    color: #ddd4e6;
+}
