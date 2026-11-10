@@ -401,7 +401,7 @@ p {
 .nosotros-historia { grid-area: historia; }
 .nosotros-aside { grid-area: exploracion; }
 
-.nosotros-presentacion, .nosotros-historia, .nosotros-aside, .panel-contacto {
+.nosotros-presentacion, .nosotros-historia, .nosotros-aside {
     padding: 30px;
     background: #fff;
     border: 1px solid #e8e0eb;
@@ -454,13 +454,12 @@ p {
 .contactos-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 28px;
+    gap: 40px;
     align-items: start;
 }
 
-.contactos-info {
-    display: grid;
-    gap: 28px;
+.contactos-info section + section {
+    margin-top: 30px;
 }
 
 .contactos-grid form {
@@ -478,9 +477,8 @@ p {
     width: 100%;
     padding: 11px 12px;
     color: #302b40;
-    background: #fcfafc;
+    background: #fff;
     border: 1px solid #cfc1d7;
-    border-radius: 3px;
     font: inherit;
 }
 
@@ -496,7 +494,7 @@ p {
 .contactos-grid table { width: 100%; border-collapse: collapse; font-size: 14px; }
 .contactos-grid caption { margin-bottom: 10px; text-align: left; color: #706779; }
 .contactos-grid th, .contactos-grid td { padding: 10px; text-align: left; border: 1px solid #e4dde8; }
-.contactos-grid thead { background: linear-gradient(90deg, #eee5f3, #fbf3e3); }
+.contactos-grid thead { background: linear-gradient(90deg, #eee5f3, #f8f6f2); }
 .mapa { display: block; width: 100%; min-height: 260px; border: 0; }
 
 /* El menú puede crecer sin tapar el contenido al adaptarse a móviles. */
@@ -526,5 +524,5 @@ p {
         grid-template-areas: "presentacion" "historia" "exploracion";
     }
     .texto-columnas { column-count: 1; }
-    .nosotros-presentacion, .nosotros-historia, .nosotros-aside, .panel-contacto { padding: 22px; }
+    .nosotros-presentacion, .nosotros-historia, .nosotros-aside { padding: 22px; }
 }
