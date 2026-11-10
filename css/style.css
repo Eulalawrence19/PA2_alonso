@@ -497,32 +497,6 @@ p {
 .contactos-grid thead { background: linear-gradient(90deg, #eee5f3, #f8f6f2); }
 .mapa { display: block; width: 100%; min-height: 260px; border: 0; }
 
-/* El menú puede crecer sin tapar el contenido al adaptarse a móviles. */
+/* Cabecera y espacio superior del contenido. */
 .cabecera { position: sticky; }
 .contenido { padding-top: 54px; }
-
-@media (max-width: 850px) {
-    .barra { flex-direction: column; gap: 12px; padding: 14px 20px; }
-    .marca { text-align: center; }
-    .menu { gap: 5px 18px; }
-    .galeria figure { width: calc((100% - 24px) / 2); }
-    .contactos-grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 600px) {
-    h1 { font-size: 34px; }
-    .inicio { padding: 70px 20px 45px; }
-    .inicio h1 { font-size: 39px; }
-    .menu-inicio { gap: 8px 20px; }
-    .barra { position: static; }
-    .cabecera { position: static; }
-    .contenido { padding: 40px 20px 30px; }
-    .galeria figure { width: 100%; }
-    .galeria img { height: auto; }
-    .nosotros-grid {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-areas: "presentacion" "historia" "exploracion";
-    }
-    .texto-columnas { column-count: 1; }
-    .nosotros-presentacion, .nosotros-historia, .nosotros-aside { padding: 22px; }
-}
