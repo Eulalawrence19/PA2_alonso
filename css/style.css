@@ -377,3 +377,154 @@ p {
 .pie-inicio p {
     color: #ddd4e6;
 }
+
+/* Páginas de la PA3: composición y elementos compartidos */
+.pagina-pa3 h1, .pagina-pa3 h2 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+.pagina-pa3 {
+    padding-bottom: 72px;
+}
+
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(230px, 0.36fr);
+    grid-template-areas:
+        "presentacion exploracion"
+        "historia exploracion";
+    gap: 28px;
+    align-items: start;
+}
+
+.nosotros-presentacion { grid-area: presentacion; }
+.nosotros-historia { grid-area: historia; }
+.nosotros-aside { grid-area: exploracion; }
+
+.nosotros-presentacion, .nosotros-historia, .nosotros-aside, .panel-contacto {
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #e8e0eb;
+    border-radius: 5px;
+}
+
+.nosotros-grid h2, .contactos-grid h2 {
+    margin-top: 12px;
+}
+
+.nosotros-presentacion img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.texto-columnas {
+    column-count: 2;
+    column-gap: 36px;
+}
+
+.nosotros-aside {
+    background: linear-gradient(145deg, #eee5f3, #fbf3e3);
+}
+
+.boton-enlace, .contactos-grid button {
+    display: inline-block;
+    padding: 11px 18px;
+    color: #fff;
+    background: #684182;
+    border: 0;
+    border-radius: 3px;
+    font: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton-enlace:hover, .contactos-grid button:hover {
+    color: #fff;
+    background: #493159;
+}
+
+.enlace-secundario {
+    display: block;
+    margin-top: 18px;
+}
+
+.contactos-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.contactos-info {
+    display: grid;
+    gap: 28px;
+}
+
+.contactos-grid form {
+    display: grid;
+    gap: 8px;
+}
+
+.contactos-grid label {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contactos-grid input, .contactos-grid textarea {
+    width: 100%;
+    padding: 11px 12px;
+    color: #302b40;
+    background: #fcfafc;
+    border: 1px solid #cfc1d7;
+    border-radius: 3px;
+    font: inherit;
+}
+
+.contactos-grid textarea { resize: vertical; }
+.contactos-grid button { justify-self: start; margin-top: 12px; }
+.contactos-grid :is(input, textarea, button):focus-visible {
+    outline: 3px solid #b58b35;
+    outline-offset: 3px;
+}
+
+.estado-formulario { margin: 4px 0 0; color: #684182; }
+.tabla-contenedor { overflow-x: auto; }
+.contactos-grid table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.contactos-grid caption { margin-bottom: 10px; text-align: left; color: #706779; }
+.contactos-grid th, .contactos-grid td { padding: 10px; text-align: left; border: 1px solid #e4dde8; }
+.contactos-grid thead { background: linear-gradient(90deg, #eee5f3, #fbf3e3); }
+.mapa { display: block; width: 100%; min-height: 260px; border: 0; }
+
+/* El menú puede crecer sin tapar el contenido al adaptarse a móviles. */
+.cabecera { position: sticky; }
+.contenido { padding-top: 54px; }
+
+@media (max-width: 850px) {
+    .barra { flex-direction: column; gap: 12px; padding: 14px 20px; }
+    .marca { text-align: center; }
+    .menu { gap: 5px 18px; }
+    .galeria figure { width: calc((100% - 24px) / 2); }
+    .contactos-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 34px; }
+    .inicio { padding: 70px 20px 45px; }
+    .inicio h1 { font-size: 39px; }
+    .menu-inicio { gap: 8px 20px; }
+    .barra { position: static; }
+    .cabecera { position: static; }
+    .contenido { padding: 40px 20px 30px; }
+    .galeria figure { width: 100%; }
+    .galeria img { height: auto; }
+    .nosotros-grid {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "presentacion" "historia" "exploracion";
+    }
+    .texto-columnas { column-count: 1; }
+    .nosotros-presentacion, .nosotros-historia, .nosotros-aside, .panel-contacto { padding: 22px; }
+}

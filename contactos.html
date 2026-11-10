@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora los canales oficiales y comparte tu recuerdo de Outworld Traveler.">
+    <title>Contactos | Outworld Traveler</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/contactos.js" defer></script>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="barra">
+            <a class="marca" href="index.html">Outworld Traveler<span>HONKAI IMPACT 3RD × GENSHIN IMPACT</span></a>
+            <nav class="menu" aria-label="Navegación principal">
+                <a href="index.html"><span aria-hidden="true">⌂</span> Inicio</a>
+                <a href="blog.html"><span aria-hidden="true">✎</span> Blog</a>
+                <a href="galeria.html"><span aria-hidden="true">▧</span> Galería</a>
+                <a href="videos.html"><span aria-hidden="true">▶</span> Videos</a>
+                <a href="nosotros.html"><span aria-hidden="true">◇</span> Nosotros</a>
+                <a class="activo" href="contactos.html" aria-current="page"><span aria-hidden="true">✉</span> Contactos</a>
+            </nav>
+        </div>
+    </header>
+    <main class="contenido pagina-pa3">
+        <p class="etiqueta">CONTACTOS · COMUNIDAD</p>
+        <h1>Conversemos sobre la aventura</h1>
+        <p class="introduccion">Comparte tu recuerdo favorito y descubre dónde seguir las novedades oficiales.</p>
+        <div class="contactos-grid">
+            <section class="panel-contacto" aria-labelledby="titulo-formulario">
+                <p class="etiqueta">ESCRÍBENOS</p>
+                <h2 id="titulo-formulario">Cuéntanos tu historia</h2>
+                <p>Este formulario es una demostración académica y no envía mensajes.</p>
+                <form id="formulario-contacto">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required autocomplete="name">
+                    <label for="correo">Correo electrónico</label>
+                    <input id="correo" name="correo" type="email" placeholder="tunombre@ejemplo.com" required autocomplete="email">
+                    <label for="asunto">Asunto</label>
+                    <input id="asunto" name="asunto" type="text" placeholder="¿De qué quieres hablar?" required>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
+                    <button type="submit">Enviar mensaje <span aria-hidden="true">→</span></button>
+                    <p class="estado-formulario" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+            <div class="contactos-info">
+                <section class="panel-contacto" aria-labelledby="titulo-canales">
+                    <p class="etiqueta">ENCUENTRA MÁS</p>
+                    <h2 id="titulo-canales">Canales oficiales</h2>
+                    <div class="tabla-contenedor">
+                        <table>
+                            <caption>Recursos para seguir explorando</caption>
+                            <thead><tr><th scope="col">Universo</th><th scope="col">Canal</th></tr></thead>
+                            <tbody>
+                                <tr><th scope="rowgroup" rowspan="2">Honkai Impact 3rd</th><td><a href="https://www.youtube.com/@HonkaiImpact3rd">YouTube oficial</a></td></tr>
+                                <tr><td><a href="https://www.facebook.com/global.honkaiimpact/">Facebook oficial</a></td></tr>
+                                <tr><th scope="row">Genshin Impact</th><td><a href="https://www.youtube.com/@GenshinImpact">YouTube oficial</a></td></tr>
+                                <tr><td colspan="2">Canales externos de sus respectivos juegos.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="panel-contacto" aria-labelledby="titulo-mapa">
+                    <p class="etiqueta">OTRO LUGAR EN EL MAPA</p>
+                    <h2 id="titulo-mapa">Una mirada al mundo</h2>
+                    <p>Singapur, un punto de referencia ilustrativo para este proyecto.</p>
+                    <iframe class="mapa" title="Mapa de Singapur, ubicación ilustrativa" src="https://maps.google.com/maps?q=Singapore&amp;z=11&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="pie">
+        <nav class="redes" aria-label="Redes oficiales de Honkai Impact 3rd">
+            <a href="https://www.youtube.com/@HonkaiImpact3rd" aria-label="YouTube de Honkai Impact 3rd" title="YouTube"><span aria-hidden="true">▶</span></a>
+            <a href="https://www.facebook.com/global.honkaiimpact/" aria-label="Facebook de Honkai Impact 3rd" title="Facebook"><span aria-hidden="true">f</span></a>
+            <a href="https://www.instagram.com/honkaiimpact3rd/" aria-label="Instagram de Honkai Impact 3rd" title="Instagram"><span aria-hidden="true">◎</span></a>
+            <a href="https://x.com/HonkaiImpact3rd" aria-label="X de Honkai Impact 3rd" title="X"><span aria-hidden="true">𝕏</span></a>
+        </nav>
+        <p>Marcas y personajes: propiedad de HoYoverse.</p>
+    </footer>
+</body>
+</html>
