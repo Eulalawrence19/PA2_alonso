@@ -287,7 +287,7 @@ p {
     font-size: 12px;
 }
 
-/* La altura del reproductor se adapta al ancho en proporcion 16:9 */
+/* La altura de los videos se adapta al ancho en proporcion 16:9 */
 .video {
     margin-bottom: 42px;
 }
